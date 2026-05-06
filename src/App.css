@@ -17,6 +17,7 @@
   --drift-blue: oklch(0.62 0.18 235);
   --save-green: oklch(0.68 0.2 145);
   --marginfi-violet: oklch(0.65 0.22 305);
+  --mango-yellow: oklch(0.78 0.18 70);
 }
 
 body::after {
@@ -342,6 +343,7 @@ tr.pool-row:hover .link-icon { opacity: 1; }
 .protocol-Drift        { background-color: oklch(0.62 0.18 235 / 0.18); color: var(--drift-blue); }
 .protocol-Save         { background-color: oklch(0.68 0.2 145 / 0.18);  color: var(--save-green); }
 .protocol-Marginfi     { background-color: oklch(0.65 0.22 305 / 0.18); color: var(--marginfi-violet); }
+.protocol-Mango        { background-color: oklch(0.78 0.18 70 / 0.18);  color: var(--mango-yellow); }
 
 .card-new {
   background: linear-gradient(90deg, var(--solana-green), var(--solana-cyan));

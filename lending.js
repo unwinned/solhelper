@@ -4,7 +4,11 @@ const UA = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, l
 const HEADERS = { 'User-Agent': UA, 'Accept': 'application/json' };
 const MIN_TVL = 100_000;
 
-const KNOWN_ASSETS = new Set(['SOL', 'USDC', 'USDT', 'USDS', 'CASH', 'USD1', 'PYUSD', 'USDG']);
+const KNOWN_ASSETS = new Set([
+  'SOL', 'USDC', 'USDT', 'USDS', 'CASH', 'USD1', 'PYUSD', 'USDG',
+  'MSOL', 'JITOSOL', 'BSOL', 'JLP', 'JTO', 'JUP',
+  'BTC', 'ETH', 'WBTC', 'CBBTC', 'BONK', 'WIF',
+]);
 
 
 const MINT_SYMBOL = {
@@ -117,6 +121,9 @@ async function fetchJupiterBorrowMarkets() {
 const LLAMA_PROTOCOLS = {
   'jupiter-lend':     'Jupiter Lend',
   'drift-staked-sol': 'Drift',
+  'marginfi':         'MarginFi',
+  'solend':           'Save',
+  'mango-v4':         'Mango',
 };
 
 async function fetchLlamaMarkets() {

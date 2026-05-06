@@ -13,12 +13,16 @@ const CARDS = [
   },
   {
     title: 'Lending',
+    isNew: true,
     description: 'Compare lending and borrowing rates across Solana protocols.',
     path: '/lending',
     icon: '◎',
     color: 'var(--solana-cyan)',
     available: true,
+<<<<<<< HEAD
     isNew: true,
+=======
+>>>>>>> 3b66c84 (adding lending)
   },
   {
     title: 'Strategies',

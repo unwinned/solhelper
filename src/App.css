@@ -15,9 +15,6 @@
   --kamino-teal: oklch(0.72 0.17 175);
   --jupiter-orange: oklch(0.72 0.18 55);
   --drift-blue: oklch(0.62 0.18 235);
-  --save-green: oklch(0.68 0.2 145);
-  --marginfi-violet: oklch(0.65 0.22 305);
-  --mango-yellow: oklch(0.78 0.18 70);
 }
 
 body::after {
@@ -341,9 +338,6 @@ tr.pool-row:hover .link-icon { opacity: 1; }
 .protocol-Kamino       { background-color: oklch(0.72 0.17 175 / 0.18); color: var(--kamino-teal); }
 .protocol-JupiterLend  { background-color: oklch(0.72 0.18 55 / 0.18);  color: var(--jupiter-orange); }
 .protocol-Drift        { background-color: oklch(0.62 0.18 235 / 0.18); color: var(--drift-blue); }
-.protocol-Save         { background-color: oklch(0.68 0.2 145 / 0.18);  color: var(--save-green); }
-.protocol-Marginfi     { background-color: oklch(0.65 0.22 305 / 0.18); color: var(--marginfi-violet); }
-.protocol-Mango        { background-color: oklch(0.78 0.18 70 / 0.18);  color: var(--mango-yellow); }
 
 .card-new {
   background: linear-gradient(90deg, var(--solana-green), var(--solana-cyan));
@@ -855,3 +849,167 @@ tr.pool-row:hover .link-icon { opacity: 1; }
   transition: color 0.15s;
 }
 .stack-step:hover .stack-step-link { color: var(--solana-purple); }
+
+/* ─── Portfolio allocation view ─────────────────────────────────────────────── */
+
+.alloc-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 3px;
+  margin-bottom: 20px;
+}
+.alloc-bar-seg {
+  border-radius: 2px;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+.alloc-bar-seg:hover { opacity: 1; }
+
+.alloc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.alloc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.alloc-row:hover {
+  border-color: oklch(0.4 0.04 260);
+  background: oklch(0.14 0.015 260);
+}
+
+.alloc-pct {
+  font-size: 1.6rem;
+  font-weight: 800;
+  min-width: 60px;
+  line-height: 1;
+  padding-top: 3px;
+  letter-spacing: -0.02em;
+}
+
+.alloc-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.alloc-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.alloc-asset {
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.alloc-type-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.alloc-desc {
+  font-size: 0.84rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}
+
+.alloc-risk {
+  font-size: 0.74rem;
+  color: oklch(0.42 0.02 260);
+  line-height: 1.4;
+}
+
+.alloc-open {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--solana-cyan);
+  white-space: nowrap;
+  padding-top: 3px;
+  transition: color 0.15s;
+}
+.alloc-row:hover .alloc-open { color: var(--solana-green); }
+
+/* ─── Portfolio size input ───────────────────────────────────────────────────── */
+
+.portfolio-input-wrap {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portfolio-input-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted-foreground);
+}
+
+.portfolio-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-input-prefix {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+
+.portfolio-input {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  width: 180px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.portfolio-input:focus { border-color: var(--solana-cyan); }
+.portfolio-input::placeholder { color: oklch(0.35 0.02 260); font-weight: 400; }
+
+.portfolio-input-total {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+.alloc-pct-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 60px;
+  gap: 2px;
+}
+
+.alloc-dollar {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}

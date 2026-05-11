@@ -1,23 +1,15 @@
 import { useState } from 'react'
 
-const PROTOCOL_LIST = ['Kamino', 'Jupiter Lend', 'Drift', 'MarginFi', 'Save', 'Mango']
+const PROTOCOL_LIST = ['Kamino', 'Jupiter Lend']
 
 const PROTOCOL_URLS = {
   'Kamino':       (addr) => addr ? `https://kamino.com/lend/${addr}/vault-overview` : 'https://kamino.com/lend',
   'Jupiter Lend': (_addr, asset) => `https://jup.ag/lend/earn/${asset}/deposit`,
-  'Drift':        ()              => 'https://app.drift.trade/earn/borrow-lend',
-  'MarginFi':     ()              => 'https://app.marginfi.com',
-  'Save':         ()              => 'https://save.finance',
-  'Mango':        ()              => 'https://app.mango.markets/borrow',
 }
 
 const BORROW_URLS = {
   'Kamino':       (addr) => addr ? `https://kamino.com/borrow/reserve/${addr}` : 'https://kamino.com/borrow',
   'Jupiter Lend': (_addr, asset) => `https://jup.ag/lend/earn/${asset}/borrow`,
-  'Drift':        ()              => 'https://app.drift.trade/earn/borrow-lend',
-  'MarginFi':     ()              => 'https://app.marginfi.com',
-  'Save':         ()              => 'https://save.finance',
-  'Mango':        ()              => 'https://app.mango.markets/borrow',
 }
 
 const formatCash = (n) => {

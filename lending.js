@@ -119,11 +119,7 @@ async function fetchJupiterBorrowMarkets() {
 
 
 const LLAMA_PROTOCOLS = {
-  'jupiter-lend':     'Jupiter Lend',
-  'drift-staked-sol': 'Drift',
-  'marginfi':         'MarginFi',
-  'solend':           'Save',
-  'mango-v4':         'Mango',
+  'jupiter-lend': 'Jupiter Lend',
 };
 
 async function fetchLlamaMarkets() {

@@ -1,8 +1,12 @@
-📖 About
 
-Solhelper is a web app that helps users navigate the Solana ecosystem more smoothly — with a Vite-powered frontend and a Node.js/Express backend handling lending and liquidity pool data.
 
-📁 Project structure
+## 📖 About
+
+**Solhelper** is a web app that helps users navigate the Solana ecosystem more smoothly — with a Vite-powered frontend and a Node.js/Express backend handling lending and liquidity pool data.
+
+## 📁 Project structure
+
+```
 solhelper/
 ├── public/            # static assets
 ├── src/                # frontend source (Vite)
@@ -13,24 +17,28 @@ solhelper/
 ├── vite.config.js
 ├── package.json
 └── package-lock.json
+```
 
-🚀 Installation
-bash
+## 🚀 Installation
+
+```bash
 git clone https://github.com/unwinned/solhelper.git
 cd solhelper
 npm install
+```
 
-▶️ Usage
+## ▶️ Usage
 
-Frontend (dev mode):
-
-bash
+**Frontend (dev mode):**
+```bash
 npm run dev
+```
 
-Backend:
-
-bash
+**Backend:**
+```bash
 node server.js
+```
 
-📬 Contact
-X: @0xunwinned
+## 📬 Contact
+
+- X (Twitter): [@0xunwinned](https://x.com/0xunwinned)
